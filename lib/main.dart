@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mcqapp/Screens/MCQResultScreen.dart';
 import 'package:mcqapp/Screens/mcqscreen.dart';
 
 void main() {
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: MCQScreen(),
+      home: MCQResultScreen(),
     );
   }
 }
