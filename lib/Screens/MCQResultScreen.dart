@@ -77,23 +77,23 @@ List AllQuestions = [
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           // crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("MCQ Screen"),
+            Text("MCQ Result Screen"),
 
-          TimerCountdown(
-          format: CountDownTimerFormat.daysHoursMinutesSeconds,
-          // enableDescriptions: false,
-          endTime: DateTime.now().add(
-            Duration(
-              // days: 5,
-              // hours: 14,
-              minutes: 27,
-              seconds: 34,
-            ),
-          ),
-          onEnd: () {
-            print("Timer finished");
-          },
-        ),
+        //   TimerCountdown(
+        //   format: CountDownTimerFormat.daysHoursMinutesSeconds,
+        //   // enableDescriptions: false,
+        //   endTime: DateTime.now().add(
+        //     Duration(
+        //       // days: 5,
+        //       // hours: 14,
+        //       minutes: 27,
+        //       seconds: 34,
+        //     ),
+        //   ),
+        //   onEnd: () {
+        //     print("Timer finished");
+        //   },
+        // ),
 
           ],
         ),
@@ -147,7 +147,11 @@ List AllQuestions = [
 
         Text("Exam:- Biology 1st Paper"),
 
-        Text("Marks:- 30 "),
+        Text("R Ans:- 30 "),
+
+        Text("W Ans:- 30 "),
+
+        Text("T Marks:- 30 "),
 
         Text("Date: ${DateTime.now()}"),
 
@@ -166,7 +170,7 @@ List AllQuestions = [
       for(int i =0; i<AllQuestions.length; i++)
       
         Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(18.0),
           child: Container(
                 decoration: BoxDecoration(
                 boxShadow: [
@@ -220,7 +224,13 @@ List AllQuestions = [
                 // children: AllQuestions[i]["Choices"].map((item) { //change index of choices array as you need
                 //   return ;
                 // }).toList(),
-              )
+              ),
+
+
+
+            Container(child: Text("Right Answer: ${AllQuestions[i]["RightAns"]}"),),
+
+            Container(child: Text("Description: ${AllQuestions[i]["Description"]}"),),
           
             ],),
           ),
