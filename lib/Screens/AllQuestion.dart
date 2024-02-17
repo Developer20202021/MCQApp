@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mcqapp/Screens/EditEveryMCQScreen.dart';
+import 'package:mcqapp/Screens/mcqscreen.dart';
 
 class AllQuestion extends StatefulWidget {
   const AllQuestion({super.key});
@@ -50,14 +52,45 @@ class _AllQuestionState extends State<AllQuestion> {
                         width: 200,
                         child: Row(children: [
                           IconButton(onPressed: (){
+
+                          
+                 Navigator.push(
+                    context,MaterialPageRoute(builder: (context) =>EditEveryMCQScreen()),
+                  );
                                     
                           }, icon: Icon(Icons.edit)),
                                     
                           IconButton(onPressed: (){
+
+
+                                showDialog(
+                                  context: context,
+                                  builder: (BuildContext context) {
+                                    return AlertDialog(
+                                      title: Text('আপনি কি Delete করতে চান?'),
+                                      content: Text('!!!এই প্রশ্নগুলো অনেক গুরুত্বপূর্ণ । তাই দয়া করে ভুল হলে Edit Button Press করে Edit করুন তবে অযাথা Delete করবেন না। '),
+                                      actions: [
+                                        TextButton(
+                                          onPressed: () {
+                                            Navigator.of(context).pop();
+                                          },
+                                          child: Text('OK'),
+                                        ),
+                                      ],
+                                    );
+                                  },
+                                );
+
+
+
                                     
                           }, icon: Icon(Icons.delete, color: Colors.red,)),
                                     
                           ElevatedButton(onPressed: (){
+                        
+               Navigator.push(
+                    context,MaterialPageRoute(builder: (context) =>MCQScreen()),
+                  );
                                     
                           }, child: Text("All MCQ"))
                         ],),
