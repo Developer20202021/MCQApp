@@ -272,6 +272,29 @@ class _CreateQuestionState extends State<CreateQuestion> {
           
           
           SizedBox(height: 8,),
+
+
+
+          Row(
+              children: [
+
+           ElevatedButton(
+              onPressed: _selectTime,
+              child: Text('Select Exam End Time'),
+            ),
+            SizedBox(width: 8),
+            Text(
+              'Selected time: ${_time.format(context)}',
+            ),
+
+
+              ],
+            ),
+
+
+          
+          
+          SizedBox(height: 8,),
             
             Row(
               children: [

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class CreateMCQ extends StatefulWidget {
-  const CreateMCQ({super.key});
+class EditMCQ extends StatefulWidget {
+  const EditMCQ({super.key});
 
   @override
-  State<CreateMCQ> createState() => _CreateMCQState();
+  State<EditMCQ> createState() => _EditMCQState();
 }
 
-class _CreateMCQState extends State<CreateMCQ> {
+class _EditMCQState extends State<EditMCQ> {
 
 
 
